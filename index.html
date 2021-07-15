@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu();">About</a></li>
+                <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+            </ul>
+            <div class="themeSwitch"></div>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <a href="#" class="logo">Portfolio</a>
+                <div class="toggle">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+            </div>
+            <section class="banner" id="banner">
+                <div class="content">
+                    <div class="imgBx">
+                        <img src="./Web-CV/img/50554468_2144321762498127_7473180388517478400_n.jpg" alt="">
+                    </div>
+                    <h3>Duy Đào</h3>
+                    <p>I'm a Creative Front End Web Developer.</p>
+                    <a href="./Web-CV/index.html" class="btn" target="_blank">Download My CV</a>
+                    <ul class="socialMedia">
+                        <li><a href="https://www.facebook.com/lu.l.ki.5/"><i class="fa fa-facebook"
+                                    aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/lu.l.ki.5/"><i class="fa fa-twitter"
+                                    aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/lu.l.ki.5/"><i class="fa fa-linkedin"
+                                    aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/lu.l.ki.5/"><i class="fa fa-instagram"
+                                    aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="about adjust" id="about">
+                <div class="title">
+                    <h2>About Me</h2>
+                </div>
+                <div class="content">
+                    <div class="textBox">
+                        <p>
+                            Tôi tên là Đào Văn Duy, sinh năm 1999. Thông qua trang tuyển dụng, tôi được
+                            biết Quý Công ty đang cần vị trí XXX. Tôi mong muốn được thử sức mình trong môi trường
+                            làm việc hết sức năng động của Quý Công ty. Tôi đã theo học và tốt nghiệp loại khá chuyên
+                            ngành Công nghệ thông tin của Đại học Công nghệ. Với trình độ và kinh
+                            nghiệm hiện có, tôi tự tin có thể đảm nhiệm tốt vị trí ứng tuyển của Quý Công ty.
+
+
+                        </p>
+                    </div>
+                    <div class="imgBx">
+                        <img src="./Web-CV/img/78375284_2352272155036419_6249981059895656448_n.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact adjust" id="contact">
+                <div class="title">
+                    <h2>Let's Say Hi</h2>
+                </div>
+                <div class="contactForm">
+                    <div class="row">
+                        <input type="text" name="" placeholder="First Name">
+                        <input type="text" name="" placeholder="Last Name">
+                    </div>
+                    <div class="row">
+                        <input type="text" name="" placeholder="Email Address">
+                        <input type="text" name="" placeholder="Mobile No.">
+                    </div>
+                    <div class="row2">
+                        <textarea placeholder="Massage"></textarea>
+                    </div>
+                    <div class="row2">
+                        <input type="submit" value="Send">
+                    </div>
+                </div>
+            </section>
+            <div class="copyright">
+                <p>Copyright © 2021 Duy Đào</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let toggle = document.querySelector('.toggle');
+        let topbar = document.querySelector('.topbar');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+        let themeSwitch = document.querySelector('.themeSwitch');
+        let body = document.querySelector('body');
+        toggle.onclick = function () {
+            toggle.classList.toggle('active');
+            topbar.classList.toggle('active');
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+
+        }
+        themeSwitch.onclick = function () {
+            body.classList.toggle('dark')
+        }
+        function toggleMenu() {
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            navigation.classList.remove('active');
+            main.classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>
